@@ -7,17 +7,17 @@ function App() {
   const [status, setStatus] = useState('');
 
   const createPass = async () => {
-    const res = await axios.post('http://localhost:5000/api/create-pass');
+    const res = await axios.post('https://granular.onrender.com/api/create-pass');
     setUserId(res.data.userId);
   };
 
   const clockIn = async () => {
-    await axios.post('http://localhost:5000/api/clock-in', { userId });
+    await axios.post('https://granular.onrender.com/api/clock-in', { userId });
     setStatus('Clocked in');
   };
 
   const clockOut = async () => {
-    const res = await axios.post('http://localhost:5000/api/clock-out', { userId });
+    const res = await axios.post('https://granular.onrender.com/api/clock-out', { userId });
     setStatus(`Clocked out, duration: ${res.data.durationHours.toFixed(2)} hrs`);
   };
 
