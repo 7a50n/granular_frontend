@@ -6,7 +6,7 @@ function App() {
   const [userId, setUserId] = useState(null);
   const [status, setStatus] = useState('');
 
-  const backendURL = 'https://your-backend-url.onrender.com'; // <-- Replace this with your real backend URL
+  const backendURL = 'https://granular.onrender.com'; // <-- Replace this with your real backend URL
 
   const createPass = async () => {
     const res = await axios.post(`${backendURL}/api/create-pass`);
